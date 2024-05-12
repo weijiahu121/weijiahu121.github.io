@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>胡炜嘉-个人简历</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: #f5fcfc;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 800px; /* 或任何你想要的最大宽度 */
+        padding: 20px; /* 为内容添加一些内部空间 */
+        padding-left: 10px;
+    }
+    .personal-info, .experience-info {
+        display: flex;
+        width: 100%; /* 使每个部分都占据容器的整个宽度 */
+        text-align: left;
+        margin-bottom: 0px; /* 添加一些底部边距 */
+        flex-direction: column; /* 设置为列方向以使下方的文本可以在图片和右侧文本下方显示 */
+        padding-left: 0;
+    }
+    .profile-pic {
+        width: 200px; /* 或你想要的任何固定宽度 */
+        height: 200px; /* 或你想要的任何固定高度，以保持和宽度一致 */
+        border-radius: 0; /* 移除圆角 */
+        display: block;
+        margin: 0;
+        text-align: center;
+        flex-shrink: 0; /* 这将防止图片尺寸因为文本区域的大小而改变 */
+    }
+    .text-next-to-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.75; /* 增加行高以实现更均匀的分布 */
+        max-width: calc(100% - 300px); /* 防止文本区域变得太宽 */
+        padding: 10px;
+        font-size: 16px;
+    }
+    .top-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* 为了减少中间的空间 */
+    }
+    @media (max-width: 600px) {
+        .top-section {
+            flex-direction: column;
+            align-items: center;
+        }
+        .text-next-to-image {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+    .text-below-image {
+        padding: 10px;
+        padding-top: 10px; /* 减小上边距来减少间距 */
+        line-height: 1.5;
+    }
+    .name {
+        text-align: center;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .statement {
+        text-align: center;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .section {
+        margin: 5px 0;
+        padding-left: 10px;
+    }
+    .section h2 {
+        font-size: 20px;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .section p, .section ul {
+        margin: 10px 0;
+    }
+    .section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .section ul li {
+        margin: 10px 0;
+    }
+    .footer {
+        margin-top: auto; /* 将 .footer 推到底部 */
+        margin-bottom: 20px; /* 添加一些底部边距以防止链接消失 */
+        text-align: center;
+    }
+    /*
+    .image-row {
+        width: 85px;
+        height: auto;
+        flex-wrap: wrap; /* 这行代码让元素在行宽不够时自动换行 */
+        display: inline-block;
+        line-height: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .image-row img {
+        margin-bottom: 10px; /* 添加一些底部边距，使得当图片换行时有一些空间 */
+        display: block;
+        width: 100%; /* 这将使图片填充整个<a>标签 */
+        height: auto;
+    }
+    .linked-image {
+        width: 85px;
+        height: auto; /* 根据原始比例自动设置高度 */
+        margin: 0 10px; 
+    }*/
+    .image-row {
+        display: flex; /* 更改为 flex 以便更好地控制其子元素 */
+        flex-wrap: wrap; /* 这行代码让元素在行宽不够时自动换行 */
+        line-height: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-row a.linked-image {
+        width: 85px; /* 这使得图片宽度为其父容器的30% */
+        height: auto; /* 根据原始比例自动设置高度 */
+        margin: 0 10px; 
+        display: inline-block; /* 添加这行代码以限制超链接的点击区域 */
+        line-height: 0; /* 防止行高影响布局 */
+        overflow: hidden; /* 防止图片溢出超链接区域 */
+    }
+
+    .image-row a.linked-image img {
+        width: 100%; /* 这将使图片填充整个<a>标签 */
+        height: auto; 
+        margin: 0; /* 移除边距避免额外的空间 */
+        display: block; /* 防止底部出现空白间隙 */
+    }
+    .increased-line-height {
+        line-height: 1.3; /* 1.1 是行高的倍数，可以根据需要调整 */
+    }
+</style>
+</head>
+<body>
+
+<div class="content-container">
+    <div class="personal-info">
+        <div class="top-section">
+            <img src="/Files/photo.jpg" alt="Photo" class="profile-pic">
+            
+            <div class="text-next-to-image">
+                <div class="name"><b>胡炜嘉</b></div>
+                <div class="statement">在读本科生</div>
+                <div class="statement">英国曼彻斯特大学</div>
+            </div>
+        </div>
+        
+        <div class="text-below-image">
+            <div class="section">
+                <h2>核心课程</h2>
+                <p>电路设计，电路测量与分析，电磁场，数学，能源运输与转换，C语言，微型控制器，PCB板设计与焊接，电子材料，数字电路设计。</p>
+            </div>
+            <div class="section">
+                <h2>联系方式</h2>
+                <p>邮箱: <a href="mailto:huweijia01@outlook.com">huweijia01@outlook.com</a></p>
+            </div>
+        
+        </div>
+    </div>
+
+    
+    <div class="experience-info">
+        <div class="section">
+            <h2>教育经历</h2>
+            <ul>
+                <li><i><b>2023年9月 - 至今：</b></i></li>
+                <li>英国曼彻斯特大学 - 电子电气工程 - 本科生在读 </li>
+            </ul>
+        </div>
+      
+        <div class="section">
+            <h2>工作经历</h2>
+            <ul>
+                <li><i><b>2019年八月-2019年九月 :</b></i></li>
+                <li>在中国创维集团担任工程师助理，深圳，中国 </li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <a href="index.html">English Version</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
